@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Book Shop & Lending Library</title>
+    <meta name="description" content="Join our literary community. Discover author readings, book clubs, youth workshops, and private events.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                Haven
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html" class="dropdown-item">Home 2 (Modern)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="catalog.html" class="nav-link">Catalog</a></li>
+                    <li><a href="events.html" class="nav-link active">Events</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard.html" class="dropdown-item"><i class="fa-regular fa-user"></i> User Dashboard</a></li>
+                            <li><a href="admin.html" class="dropdown-item"><i class="fa-solid fa-lock"></i> Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-toggles-item">
+                        <div class="header-controls">
+                            <button id="themeToggle" class="toggle-btn" aria-label="Toggle Dark Mode">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+                            <button id="dirToggle" class="btn btn-outline lang-toggle" aria-label="Toggle Text Direction">
+                                LTR
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero -->
+    <section class="hero" style="background-color: transparent;">
+        <img src="events_hero_bg.png" alt="Events" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container relative z-10" style="padding-top: 10rem; padding-bottom: 8rem; text-align: center;">
+            <div class="hero-content reveal">
+                <span class="hero-subtitle" style="color: var(--accent);">Community & Gatherings</span>
+                <h1 class="hero-title" style="color: white; font-size: 4rem;">Come Together.</h1>
+                <p class="hero-text" style="color: var(--text-primary); max-width: 600px; margin: 0 auto 3rem;">From intimate author readings to lively book clubs and youth workshops, Haven is where the community connects.</p>
+                <a href="#schedule" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">View Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Upcoming Schedule (Asymmetrical Calendar Grid) -->
+    <section id="schedule" class="section">
+        <div class="container reveal">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">This Week at Haven</h2>
+            <div class="calendar-grid">
+                <div class="calendar-cell large">
+                    <span class="calendar-date">12</span>
+                    <div class="calendar-content">
+                        <span style="color: var(--accent); font-weight: 600;">Thursday, 6:00 PM</span>
+                        <h3 style="font-size: 2rem; margin: 0.5rem 0;">Fiction Book Club</h3>
+                        <p style="color: var(--text-secondary);">Join us for a discussion of this month's pick: "The Silent Echo".</p>
+                    </div>
+                </div>
+                <div class="calendar-cell">
+                    <span class="calendar-date">13</span>
+                    <div class="calendar-content">
+                        <span style="color: var(--accent); font-weight: 600;">Friday, 7:30 PM</span>
+                        <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Poetry Open Mic</h3>
+                        <p style="color: var(--text-secondary);">Share your original work.</p>
+                    </div>
+                </div>
+                <div class="calendar-cell">
+                    <span class="calendar-date">14</span>
+                    <div class="calendar-content">
+                        <span style="color: var(--accent); font-weight: 600;">Saturday, 10:00 AM</span>
+                        <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Author Signing</h3>
+                        <p style="color: var(--text-secondary);">Meet NYT Bestseller Julian Cross.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Author Spotlight (Split-Screen Parallax) -->
+    <section class="section" style="padding: 0;">
+        <div class="split-parallax">
+            <div class="split-parallax-img reveal" style="background-image: url('author_parallax_bg.png');"></div>
+            <div class="split-parallax-content reveal">
+                <span class="hero-subtitle">Special Event</span>
+                <h2 class="section-title" style="margin-bottom: 1rem; font-size: 3rem;">An Evening with Julian Cross</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">We are thrilled to host acclaimed mystery writer Julian Cross for an exclusive reading, Q&A session, and book signing of his latest masterpiece.</p>
+                <button class="btn btn-primary" style="align-self: flex-start;">Reserve Your Seat</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Youth Workshops (Overlapping Polaroid Grid) -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container reveal">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+                <h2 class="section-title">Youth Workshops</h2>
+                <p style="font-size: 1.1rem; line-height: 1.6;">Inspiring the next generation of readers and writers. Our Saturday morning workshops include interactive storytelling, creative writing, and illustration basics.</p>
+            </div>
+            
+            <div class="polaroid-grid">
+                <div class="polaroid">
+                    <img src="60bb14ff-72e3-4c50-b3c3-1ba6ddf82bcb.jpeg" alt="Storytime">
+                    <div class="polaroid-caption">Storytime</div>
+                </div>
+                <div class="polaroid">
+                    <img src="eb6e506b-61b7-4b80-9879-adb84e567d54.jpeg" alt="Creative Writing">
+                    <div class="polaroid-caption">Creative Writing</div>
+                </div>
+                <div class="polaroid">
+                    <img src="9b368635-ae78-446f-bd75-970d8279ab92.jpeg" alt="Illustration">
+                    <div class="polaroid-caption">Illustration</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Private Venue Booking (Snap-Scroll Carousel) -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="container reveal">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Host Your Event</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">Rent our spaces for private book clubs, literary birthdays, corporate mixers, or quiet study groups.</p>
+        </div>
+        <div class="snap-carousel reveal">
+            <div class="snap-slide" style="background-image: url('21fc6ae8-2e0f-4222-931c-b4d65240a994.jpeg');">
+                <div class="snap-content">
+                    <h3 style="font-size: 2.5rem; font-family: 'Playfair Display', serif;">The Main Hall</h3>
+                    <p style="font-size: 1.2rem; opacity: 0.9;">Perfect for large gatherings and corporate events.</p>
+                </div>
+            </div>
+            <div class="snap-slide" style="background-image: url('589a12f8-2774-4b87-8395-bc427bcabef9.jpeg');">
+                <div class="snap-content">
+                    <h3 style="font-size: 2.5rem; font-family: 'Playfair Display', serif;">Glass Study Rooms</h3>
+                    <p style="font-size: 1.2rem; opacity: 0.9;">Quiet spaces equipped with whiteboards and Wi-Fi.</p>
+                </div>
+            </div>
+            <div class="snap-slide" style="background-image: url('c74ca174-678e-4efa-917d-5f13513d24e0.jpeg');">
+                <div class="snap-content">
+                    <h3 style="font-size: 2.5rem; font-family: 'Playfair Display', serif;">The Cafe Lounge</h3>
+                    <p style="font-size: 1.2rem; opacity: 0.9;">Ideal for intimate mixers and casual book clubs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Newsletter (Circular Expanding CTA) -->
+    <section class="section">
+        <div class="container reveal">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 class="section-title">Never Miss a Chapter</h2>
+                <p style="color: var(--text-secondary);">Join our literary circle for weekly updates on events and guest authors.</p>
+            </div>
+            <div class="circular-cta-container">
+                <button class="circular-btn">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <i class="fa-solid fa-book-open"></i> Haven
+                    </a>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Your neighborhood sanctuary for literary exploration and community connection.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="services.html">Memberships</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Member Portal</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">User Dashboard</a></li>
+                        <li><a href="dashboard.html">Borrowing History</a></li>
+                        <li><a href="dashboard.html">Place Request</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Reading Row, NY 10012</li>
+                        <li><i class="fa-solid fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@chapterandverse.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Haven Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

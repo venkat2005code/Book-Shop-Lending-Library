@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog | Book Shop & Lending Library</title>
+    <meta name="description" content="A premium neighborhood bookshop and lending library. Browse our entire collection of rare books, new arrivals, and staff picks.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                Haven
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html" class="dropdown-item">Home 2 (Modern)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="catalog.html" class="nav-link active">Catalog</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard.html" class="dropdown-item"><i class="fa-regular fa-user"></i> User Dashboard</a></li>
+                            <li><a href="admin.html" class="dropdown-item"><i class="fa-solid fa-lock"></i> Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-toggles-item">
+                        <div class="header-controls">
+                            <button id="themeToggle" class="toggle-btn" aria-label="Toggle Dark Mode">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+                            <button id="dirToggle" class="btn btn-outline lang-toggle" aria-label="Toggle Text Direction">
+                                LTR
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero Search -->
+    <section class="hero" style="background-color: var(--bg-secondary); padding: 10rem 0 6rem; text-align: center;">
+        <div class="container reveal">
+            <span class="hero-subtitle">The Archive</span>
+            <h1 class="hero-title" style="color: white;">Explore the Catalog.</h1>
+            <p class="hero-text" style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">Search thousands of rare editions, contemporary fiction, and historical texts.</p>
+            <div class="hero-search-wrapper">
+                <input type="text" class="hero-search-input" placeholder="Search by title, author, or ISBN...">
+                <button class="btn btn-primary hero-search-btn"><i class="fa-solid fa-magnifying-glass"></i> <span class="search-btn-text">Search</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Featured Genres (Accordion Showcase) -->
+    <section class="section">
+        <div class="container reveal">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Browse by Genre</h2>
+            <div class="accordion-showcase">
+                <div class="accordion-panel" style="background-image: url('https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=800&auto=format&fit=crop');">
+                    <span class="accordion-title-vertical">Science Fiction</span>
+                    <div class="accordion-content">
+                        <h3 style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Science Fiction</h3>
+                        <p>Explore galaxies far away.</p>
+                    </div>
+                </div>
+                <div class="accordion-panel" style="background-image: url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop');">
+                    <span class="accordion-title-vertical">Mystery</span>
+                    <div class="accordion-content">
+                        <h3 style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Mystery</h3>
+                        <p>Uncover the truth.</p>
+                    </div>
+                </div>
+                <div class="accordion-panel" style="background-image: url('https://images.unsplash.com/photo-1461360370896-922624d12aa1?q=80&w=800&auto=format&fit=crop');">
+                    <span class="accordion-title-vertical">History</span>
+                    <div class="accordion-content">
+                        <h3 style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">History</h3>
+                        <p>Learn from the past.</p>
+                    </div>
+                </div>
+                <div class="accordion-panel" style="background-image: url('https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?q=80&w=800&auto=format&fit=crop');">
+                    <span class="accordion-title-vertical">Romance</span>
+                    <div class="accordion-content">
+                        <h3 style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 0.5rem;">Romance</h3>
+                        <p>Stories of the heart.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Rare Books Collection (Horizontal Marquee) -->
+    <section class="section" style="background-color: var(--bg-secondary); overflow: hidden;">
+        <div class="container reveal">
+            <h2 class="section-title">The Rare Archive</h2>
+        </div>
+        <div class="marquee-container reveal">
+            <div class="marquee-track">
+                <!-- Double the items for seamless scrolling -->
+                <div class="marquee-item"><img src="9c255d6c-0bb5-4160-b6bf-01ca4675fdc3.jpeg" alt="Rare Book 1"></div>
+                <div class="marquee-item"><img src="39e2108d-6337-4cf3-835e-12d9089670c1.jpeg" alt="Rare Book 2"></div>
+                <div class="marquee-item"><img src="c758d2d4-7f56-42c4-b6d6-d03e57ff882d.jpeg" alt="Rare Book 3"></div>
+                <div class="marquee-item"><img src="5225621a-17fc-481c-a286-3b262e4a8e1b.jpeg" alt="Rare Book 4"></div>
+                <div class="marquee-item"><img src="491f8484-d5a8-4518-b727-6d798c82a073.jpeg" alt="Rare Book 5"></div>
+                <div class="marquee-item"><img src="e8796b3f-074f-431e-ab95-c2d5b39cbd82.jpeg" alt="Rare Book 6"></div>
+                <div class="marquee-item"><img src="6a0d727c-26c2-4464-b89e-9c0fb3f2869a.jpeg" alt="Rare Book 7"></div>
+                <div class="marquee-item"><img src="9c255d6c-0bb5-4160-b6bf-01ca4675fdc3.jpeg" alt="Rare Book 1 (Duplicate)"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Staff Top Picks (3D Card Flip) -->
+    <section class="section">
+        <div class="container">
+            <div class="section-heading reveal" style="text-align: center; margin-bottom: 4rem;">
+                <span class="section-subtitle">Librarian Recommended</span>
+                <h2 class="section-title">Staff Top Picks</h2>
+            </div>
+            
+            <div class="flip-grid reveal">
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="00afbc17-eaae-4566-a8de-d3c6b5f7d3a4.jpeg" alt="Structural Integrity">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">Structural Integrity</h3>
+                        <p style="opacity: 0.9;">"A visually stunning exploration. Completely changes how you look at buildings."</p>
+                        <span style="margin-top: auto; font-style: italic;">- Alice M.</span>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="ff45012b-6d44-46dd-b1d0-107e6f58f036.jpeg" alt="A Tale of Two Cities">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">A Tale of Two Cities</h3>
+                        <p style="opacity: 0.9;">"The classic Dickens novel that remains as gripping today as it was a century ago."</p>
+                        <span style="margin-top: auto; font-style: italic;">- James R.</span>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-front">
+                        <img src="1e121352-365f-44ab-98b6-d8d79fe2d300.jpeg" alt="Midnight in Paris">
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1rem;">Midnight in Paris</h3>
+                        <p style="opacity: 0.9;">"Brilliant character development with a twist you won't see coming."</p>
+                        <span style="margin-top: auto; font-style: italic;">- Sarah T.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: New Acquisitions (Minimalist Staggered List) -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container reveal">
+            <h2 class="section-title" style="margin-bottom: 4rem;">New Acquisitions</h2>
+            <div class="minimal-list">
+                <div class="minimal-list-item">
+                    <div class="minimal-index">01</div>
+                    <div>
+                        <h3 class="minimal-title">The Stoic Reader</h3>
+                        <span class="minimal-meta">Philosophy Collection &mdash; Added Today</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right" style="font-size: 1.5rem; color: var(--accent);"></i>
+                </div>
+                <div class="minimal-list-item">
+                    <div class="minimal-index">02</div>
+                    <div>
+                        <h3 class="minimal-title">Origins of the Cosmos</h3>
+                        <span class="minimal-meta">Science & Nature &mdash; Added Yesterday</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right" style="font-size: 1.5rem; color: var(--accent);"></i>
+                </div>
+                <div class="minimal-list-item">
+                    <div class="minimal-index">03</div>
+                    <div>
+                        <h3 class="minimal-title">Modern Culinary Arts</h3>
+                        <span class="minimal-meta">Food & Drink &mdash; Added This Week</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right" style="font-size: 1.5rem; color: var(--accent);"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Suggest a Book (Elegant Floating Form) -->
+    <section class="section">
+        <div class="container reveal">
+            <div class="elegant-form-container" style="max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Suggest an Acquisition</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 3rem;">Enter the details below to request a new addition to our catalog.</p>
+                
+                <form>
+                    <div class="elegant-input-group">
+                        <input type="text" class="elegant-input" placeholder=" " required>
+                        <label class="elegant-label">Book Title</label>
+                    </div>
+                    <div class="elegant-input-group">
+                        <input type="text" class="elegant-input" placeholder=" " required>
+                        <label class="elegant-label">Author Name</label>
+                    </div>
+                    <div class="elegant-input-group">
+                        <input type="text" class="elegant-input" placeholder=" ">
+                        <label class="elegant-label">ISBN (Optional)</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" style="width: 100%; font-size: 1.2rem; padding: 1rem;">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <i class="fa-solid fa-book-open"></i> Haven
+                    </a>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Your neighborhood sanctuary for literary exploration and community connection.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="catalog.html">Catalog</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="services.html">Memberships</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Member Portal</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">User Dashboard</a></li>
+                        <li><a href="dashboard.html">Borrowing History</a></li>
+                        <li><a href="dashboard.html">Place Request</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Reading Row, NY 10012</li>
+                        <li><i class="fa-solid fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@chapterandverse.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Haven Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

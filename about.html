@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop & Lending Library</title>
+    <meta name="description" content="A premium neighborhood bookshop and lending library. Browse genres, new arrivals, and membership plans.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                Haven
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <!-- Home Dropdown -->
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html" class="dropdown-item">Home 2 (Modern)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="catalog.html" class="nav-link">Catalog</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    
+                    <!-- Dashboard Dropdown -->
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard.html" class="dropdown-item"><i class="fa-regular fa-user"></i> User Dashboard</a></li>
+                            <li><a href="admin.html" class="dropdown-item"><i class="fa-solid fa-lock"></i> Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-toggles-item">
+                        <div class="header-controls">
+                            <button id="themeToggle" class="toggle-btn" aria-label="Toggle Dark Mode">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+                            <button id="dirToggle" class="btn btn-outline lang-toggle" aria-label="Toggle Text Direction">
+                                LTR
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- About Page Header -->
+    <header class="page-header" style="position: relative; overflow: hidden; background-color: transparent;">
+        <img src="76ff0e44-7085-4383-aed8-23948f202805.jpeg" alt="About Haven" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container reveal" style="position: relative; z-index: 10;">
+            <span class="section-subtitle">Our Story</span>
+            <h1 class="page-title" style="color: white;">About Haven</h1>
+            <p style="color: var(--text-primary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">A sanctuary for readers, thinkers, and explorers of worlds.</p>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                <div class="reveal">
+                    <img src="80c6503f-d42f-417b-8337-ac3bcc38809f.jpeg" alt="Library Interior" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-xl);">
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <h2 class="section-title">A Legacy of Pages</h2>
+                    <p class="mb-4 text-secondary">Founded in 1982, Haven began as a small collection of rare literature. Today, it stands as a cornerstone of the neighborhood, offering an extensive lending library and a curated selection of new titles.</p>
+                    <p class="mb-4 text-secondary">We believe in the power of a physical book. The smell of the pages, the weight of the spine, and the community that forms when stories are shared.</p>
+                    <p class="text-secondary">Our mission is simple: to connect the right reader with the right book at the right time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-heading reveal">
+                <span class="section-subtitle">The Curators</span>
+                <h2 class="section-title">Meet Our Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <img src="a6f9d0ed-96dd-4e14-bbec-952590f43e72.jpeg" alt="Clara Evans" class="team-img">
+                    <h3>Clara Evans</h3>
+                    <p style="color: var(--accent); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem; display: block;">Head Librarian</p>
+                    <p style="font-size: 0.9rem; color: var(--text-primary);">Expert in 19th-century literature and rare book preservation.</p>
+                </div>
+                <div class="team-card reveal" style="transition-delay: 0.1s;">
+                    <img src="3a83645f-9e93-4608-8c85-03bab5e78cf7.jpeg" alt="James Porter" class="team-img">
+                    <h3>James Porter</h3>
+                    <p style="color: var(--accent); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem; display: block;">Fiction Curator</p>
+                    <p style="font-size: 0.9rem; color: var(--text-primary);">Always knows the perfect mystery novel to recommend.</p>
+                </div>
+                <div class="team-card reveal" style="transition-delay: 0.2s;">
+                    <img src="a6c5d80a-0612-4df1-a582-3ed206440382.jpeg" alt="Maya Lin" class="team-img">
+                    <h3>Maya Lin</h3>
+                    <p style="color: var(--accent); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.5rem; display: block;">Events Director</p>
+                    <p style="font-size: 0.9rem; color: var(--text-primary);">Organizes our beloved author readings and book club nights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Core Values -->
+    <section class="section">
+        <div class="container reveal" style="position: relative; z-index: 10;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">Our Core Values</h2>
+            <div class="vertical-timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <i class="fa-solid fa-leaf timeline-icon"></i>
+                        <h3 style="margin-bottom: 1rem;">Preservation</h3>
+                        <p style="color: var(--text-primary); font-size: 0.9rem;">We protect and restore literary history, ensuring rare books survive for future generations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <i class="fa-solid fa-people-group timeline-icon"></i>
+                        <h3 style="margin-bottom: 1rem;">Community</h3>
+                        <p style="color: var(--text-primary); font-size: 0.9rem;">A physical space designed to foster intellectual conversations and meaningful connections.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <i class="fa-solid fa-lightbulb timeline-icon"></i>
+                        <h3 style="margin-bottom: 1rem;">Discovery</h3>
+                        <p style="color: var(--text-primary); font-size: 0.9rem;">Curating collections that challenge perspectives and inspire lifelong learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: The Archive Gallery -->
+    <section class="section" style="background-color: var(--bg-secondary); overflow: hidden;">
+        <div class="container reveal" style="position: relative; z-index: 10;">
+            <h2 class="section-title">The Archive</h2>
+            <div class="masonry-collage">
+                <div class="masonry-item m-item-1">
+                    <img src="03afe36d-afa8-4ec9-bcd1-c13541b6d975.jpeg" alt="Archive Image 1">
+                </div>
+                <div class="masonry-item m-item-2">
+                    <img src="969bd23e-c5d7-4df9-9360-d5f03ae5e233.jpeg" alt="Archive Image 2">
+                </div>
+                <div class="masonry-item m-item-3">
+                    <img src="af3d0022-21b1-41a2-ac44-424d550dd46a.jpeg" alt="Archive Image 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Join Our Mission -->
+    <section class="section" style="padding: 0;">
+        <div class="overlap-container reveal">
+            <img src="0cc7e056-24b3-48b5-ab06-8b6b2de381cd.jpeg" alt="Join Our Mission" class="overlap-image">
+            <div class="overlap-content">
+                <h2 class="section-title">Join Our Mission</h2>
+                <p style="color: var(--text-primary); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.6;">We are always looking for passionate librarians, archivers, and volunteers who believe in the power of physical books. Become a guardian of knowledge.</p>
+                <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">View Opportunities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <i class="fa-solid fa-book-open"></i> Haven
+                    </a>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Your neighborhood sanctuary for literary exploration and community connection.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#arrivals">New Arrivals</a></li>
+                        <li><a href="#memberships">Memberships</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Member Portal</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">User Dashboard</a></li>
+                        <li><a href="#">Borrowing History</a></li>
+                        <li><a href="#">Place Request</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Reading Row, NY 10012</li>
+                        <li><i class="fa-solid fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@chapterandverse.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Haven Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

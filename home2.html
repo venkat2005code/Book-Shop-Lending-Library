@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop & Lending Library</title>
+    <meta name="description" content="A premium neighborhood bookshop and lending library. Browse genres, new arrivals, and membership plans.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                Haven
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <!-- Home Dropdown -->
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle active">
+                            Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html" class="dropdown-item">Home 2 (Modern)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="catalog.html" class="nav-link">Catalog</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    
+                    <!-- Dashboard Dropdown -->
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard.html" class="dropdown-item"><i class="fa-regular fa-user"></i> User Dashboard</a></li>
+                            <li><a href="admin.html" class="dropdown-item"><i class="fa-solid fa-lock"></i> Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-toggles-item">
+                        <div class="header-controls">
+                            <button id="themeToggle" class="toggle-btn" aria-label="Toggle Dark Mode">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+                            <button id="dirToggle" class="btn btn-outline lang-toggle" aria-label="Toggle Text Direction">
+                                LTR
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section (Home 2) -->
+    <section class="hero">
+        <img src="978b9ae7-cef2-4d22-a502-a0c6bd955d82.jpeg" alt="Modern Books" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container relative z-10">
+            <div class="hero-content reveal">
+                <span class="hero-subtitle">Modern Collection</span>
+                <h1 class="hero-title" style="font-size: 4rem;">Curated Books For The Modern Mind.</h1>
+                <p class="hero-text">Explore a hand-picked selection of contemporary literature, thought-provoking non-fiction, and beautiful art books.</p>
+                <div class="hero-actions">
+                    <a href="services.html" class="btn btn-primary">Our Services</a>
+                    <a href="about.html" class="btn btn-outline" style="color: white; border-color: white;">About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Picks Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-heading reveal" style="text-align: left; margin-bottom: 4rem;">
+                <span class="section-subtitle">Curated by our librarians</span>
+                <h2 class="section-title">Staff Picks</h2>
+            </div>
+            
+            <div class="staff-picks-showcase">
+                <!-- Left: Featured Pick -->
+                <div class="featured-pick reveal">
+                    <img src="d5c4e0d2-d706-43ca-a179-0efda254cf83.jpeg" alt="The Art of Space">
+                    <span class="book-genre" style="color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">Design</span>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0.5rem 0;">The Art of Space</h3>
+                    <p class="book-author" style="color: var(--text-secondary); margin-bottom: 1rem;">By Mark Z.</p>
+                    <p style="color: var(--text-primary); line-height: 1.6;">"A visually stunning exploration of architectural negative space. I couldn't put this down. It completely changes how you look at the buildings around you." - <em>Sarah, Head Librarian</em></p>
+                </div>
+                
+                <!-- Right: List of Picks -->
+                <div class="picks-list reveal" style="transition-delay: 0.2s;">
+                    <div class="pick-list-item">
+                        <img src="17716598-117d-4115-ac98-0141a8636c14.jpeg" alt="Modern Stoicism" class="pick-list-img">
+                        <div>
+                            <span class="book-genre" style="color: var(--accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Philosophy</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 0.5rem 0;">Modern Stoicism</h3>
+                            <p class="book-author" style="color: var(--text-secondary); margin-bottom: 0.5rem;">By L. Seneca</p>
+                            <p style="font-size: 0.9rem; color: var(--text-primary);">"Essential reading for finding calm in today's chaotic world."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pick-list-item">
+                        <img src="7e5ca837-d11a-451d-a38d-16a5637d6845.jpeg" alt="The Silent Echo" class="pick-list-img">
+                        <div>
+                            <span class="book-genre" style="color: var(--accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Fiction</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 0.5rem 0;">The Silent Echo</h3>
+                            <p class="book-author" style="color: var(--text-secondary); margin-bottom: 0.5rem;">By Eleanor Vance</p>
+                            <p style="font-size: 0.9rem; color: var(--text-primary);">"A gripping, atmospheric mystery that kept me up all night."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pick-list-item">
+                        <img src="ef7589a6-8f1a-4fa6-97d8-09cbd9929b6d.jpeg" alt="Midnight in Paris" class="pick-list-img">
+                        <div>
+                            <span class="book-genre" style="color: var(--accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Mystery</span>
+                            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 0.5rem 0;">Midnight in Paris</h3>
+                            <p class="book-author" style="color: var(--text-secondary); margin-bottom: 0.5rem;">By Julian Cross</p>
+                            <p style="font-size: 0.9rem; color: var(--text-primary);">"Brilliant character development with a twist you won't see coming."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Author Spotlight -->
+    <section class="section massive-typography" style="background-color: var(--bg-secondary); padding: 8rem 0;">
+        <div class="massive-typography-text">MAYA ANGELOU</div>
+        <div class="container reveal">
+            <h2 class="section-title">Author Spotlight</h2>
+            <div class="massive-content">
+                <div style="flex: 1;">
+                    <img src="846b04f0-b124-4149-9bb5-07d75693f63a.jpeg" alt="Maya Angelou" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                </div>
+                <div style="flex: 1; background-color: var(--card-bg); padding: 3rem; border-radius: 12px; box-shadow: var(--shadow-lg); z-index: 5;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent);">Maya Angelou</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-style: italic;">Featured Writer of the Month</p>
+                    <p style="line-height: 1.8; margin-bottom: 2rem; color: var(--text-secondary);">"There is no greater agony than bearing an untold story inside you." Discover the profound works of Maya Angelou this month, featuring rare editions of her poetry and autobiographical masterpieces available in our reserve collection.</p>
+                    <a href="#" class="btn btn-primary">Browse Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Reader Testimonials -->
+    <section class="section">
+        <div class="container reveal">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">Voices of Haven</h2>
+            <div class="quote-slider">
+                <div class="quote-mark-bg">"</div>
+                <div class="quote-content">
+                    The most curated and beautifully maintained library in the city. I spend every weekend exploring the sci-fi archives. A true sanctuary.
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+                    <img src="7d63f36d-8565-4c9b-a0c3-5c9a6f91ca13.jpeg" alt="David L." style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+                    <div style="text-align: left;">
+                        <span style="font-weight: 600; display: block;">David L.</span>
+                        <span style="color: var(--text-secondary); font-size: 0.85rem;">Member since 2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Bestselling Collections -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container reveal">
+            <h2 class="section-title">Curated Collections</h2>
+            <div style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 2rem; scroll-snap-type: x mandatory;">
+                <div style="min-width: 300px; scroll-snap-align: start; position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <img src="b1a81fc5-61c9-4b95-8ad0-8e58933953ea.jpeg" alt="Modern Philosophy" style="width: 100%; height: 400px; object-fit: cover; display: block; filter: brightness(0.7);">
+                    <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Modern Philosophy</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">12 Books</p>
+                    </div>
+                </div>
+                <div style="min-width: 300px; scroll-snap-align: start; position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <img src="1b1a29cf-a2b2-4fe9-9d39-72ac707377fa.jpeg" alt="Deep Space Sci-Fi" style="width: 100%; height: 400px; object-fit: cover; display: block; filter: brightness(0.7);">
+                    <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Deep Space Sci-Fi</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">24 Books</p>
+                    </div>
+                </div>
+                <div style="min-width: 300px; scroll-snap-align: start; position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <img src="1b1a29cf-a2b2-4fe9-9d39-72ac707377fa.jpeg" alt="Historical Biographies" style="width: 100%; height: 400px; object-fit: cover; display: block; filter: brightness(0.7);">
+                    <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Historical Biographies</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">18 Books</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Newsletter Subscription -->
+    <section style="margin-top: -6rem; position: relative; z-index: 10; padding-bottom: 4rem;">
+        <div class="container reveal">
+            <div class="newsletter-card">
+                <i class="fa-regular fa-envelope" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                <h2 class="section-title" style="margin-bottom: 1rem;">The Literary Ledger</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Subscribe to our newsletter to receive updates on rare book acquisitions, upcoming author events, and curated reading lists.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" style="flex-grow: 1; padding: 1rem 1.5rem; border: 1px solid var(--border-color); border-radius: 50px; background-color: var(--bg-secondary); color: var(--text-primary); outline: none;">
+                    <button type="button" class="btn btn-primary" style="padding: 1rem 2rem; border-radius: 50px;">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <i class="fa-solid fa-book-open"></i> Haven
+                    </a>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Your neighborhood sanctuary for literary exploration and community connection.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#arrivals">New Arrivals</a></li>
+                        <li><a href="#memberships">Memberships</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Member Portal</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">User Dashboard</a></li>
+                        <li><a href="#">Borrowing History</a></li>
+                        <li><a href="#">Place Request</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Reading Row, NY 10012</li>
+                        <li><i class="fa-solid fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@chapterandverse.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Haven Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

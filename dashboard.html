@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard - Haven</title>
+    <meta name="description" content="Manage your reading journey with Haven member dashboard.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body class="dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-header">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-book-open"></i> Haven
+            </a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#overview" class="sidebar-link active"><i class="fa-solid fa-house"></i> Overview</a></li>
+                <li><a href="#browse" class="sidebar-link"><i class="fa-solid fa-magnifying-glass"></i> Browse Books</a></li>
+                <li><a href="#borrowings" class="sidebar-link"><i class="fa-solid fa-book-open-reader"></i> My Borrowings</a></li>
+                <li><a href="#activity" class="sidebar-link"><i class="fa-solid fa-chart-line"></i> Activity & Membership</a></li>
+                <li><a href="#payments" class="sidebar-link"><i class="fa-solid fa-credit-card"></i> Payments & Alerts</a></li>
+                <li><a href="#profile" class="sidebar-link"><i class="fa-solid fa-user-gear"></i> Profile & Settings</a></li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="index.html" class="btn btn-outline" style="width: 100%; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        
+        <!-- Sticky Header -->
+        <header class="dashboard-header">
+            <div style="display: flex; align-items: center;">
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search books, authors, ISBN...">
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <!-- Theme Toggles -->
+                <div class="header-controls" style="display: flex; gap: 1rem; align-items: center; margin-right: 1rem;">
+                    <button id="themeToggle" class="toggle-btn" aria-label="Toggle Dark Mode" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); background: none; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: all 0.3s ease;">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button id="dirToggle" class="btn btn-outline" aria-label="Toggle Text Direction" style="padding: 0.25rem 1rem; font-size: 0.85rem; border-radius: 50px; cursor: pointer; transition: all 0.3s ease;">
+                        LTR
+                    </button>
+                </div>
+
+                <div class="header-icon">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                
+                <div class="user-profile">
+                    <img src="e721ccdb-714b-47af-9063-ca46187b5ad3.jpeg" alt="Jane Doe" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">Jane Doe</span>
+                        <span class="user-role">Bibliophile Member</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            
+            <!-- 1. Dashboard Overview -->
+            <section id="overview" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Dashboard / Overview</div>
+                    <h2>Welcome back, Jane!</h2>
+                    <p style="color: var(--text-secondary);">Here is what's happening with your reading journey today.</p>
+                </div>
+                
+                <!-- Metrics -->
+                <div class="dashboard-grid">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-book"></i></div>
+                        <div class="stat-details">
+                            <h3>Currently Borrowed</h3>
+                            <div class="stat-value">2 <span style="font-size: 1rem; font-weight: normal; color: var(--text-secondary);">/ 2</span></div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-icon" style="color: #e74c3c; background-color: rgba(231, 76, 60, 0.1);"><i class="fa-regular fa-calendar-xmark"></i></div>
+                        <div class="stat-details">
+                            <h3>Next Due Date</h3>
+                            <div class="stat-value" style="font-size: 1.2rem;">Aug 18, 2026</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-icon" style="color: #2ecc71; background-color: rgba(46, 204, 113, 0.1);"><i class="fa-solid fa-medal"></i></div>
+                        <div class="stat-details">
+                            <h3>Membership Status</h3>
+                            <div class="stat-value" style="font-size: 1.2rem; color: #2ecc71;">Active</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reading Progress -->
+                <div class="dashboard-card">
+                    <h3 style="margin-bottom: 1.5rem; font-family: 'Playfair Display', serif;">Current Reading Progress</h3>
+                    <div style="display: flex; gap: 2rem; align-items: center;">
+                        
+                        <div style="flex-grow: 1;">
+                            <h4 style="margin-bottom: 0.5rem;">The Silent Echo</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">By Eleanor Vance</p>
+                            <div style="width: 100%; height: 8px; background-color: var(--bg-secondary); border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                                <div style="width: 65%; height: 100%; background-color: var(--accent);"></div>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">65% Completed (Page 210 of 320)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Browse & Discover Books -->
+            <section id="browse" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Dashboard / Browse Books</div>
+                    <h2>Discover Your Next Read</h2>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem; overflow-x: auto; padding-bottom: 0.5rem;">
+                    <button class="btn btn-primary" style="padding: 0.5rem 1rem; border-radius: 50px;">All</button>
+                    <button class="btn btn-outline" style="padding: 0.5rem 1rem; border-radius: 50px;">Fiction</button>
+                    <button class="btn btn-outline" style="padding: 0.5rem 1rem; border-radius: 50px;">Non-Fiction</button>
+                    <button class="btn btn-outline" style="padding: 0.5rem 1rem; border-radius: 50px;">Sci-Fi</button>
+                    <button class="btn btn-outline" style="padding: 0.5rem 1rem; border-radius: 50px;">Mystery</button>
+                    <button class="btn btn-outline" style="padding: 0.5rem 1rem; border-radius: 50px;">Biography</button>
+                </div>
+                
+                <div class="books-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="book-card">
+                        
+                        <div class="book-info">
+                            <span class="status-badge status-active" style="display: inline-block; margin-bottom: 0.5rem;">Available</span>
+                            <h3 class="book-title">Midnight in Paris</h3>
+                            <p class="book-author">Julian Cross</p>
+                            <button class="btn btn-outline" style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">Place Request</button>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        
+                        <div class="book-info">
+                            <span class="status-badge status-pending" style="display: inline-block; margin-bottom: 0.5rem;">Waitlist</span>
+                            <h3 class="book-title">The Art of Space</h3>
+                            <p class="book-author">Mark Z.</p>
+                            <button class="btn btn-outline" style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">Join Waitlist</button>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        
+                        <div class="book-info">
+                            <span class="status-badge status-active" style="display: inline-block; margin-bottom: 0.5rem;">Available</span>
+                            <h3 class="book-title">Modern Stoicism</h3>
+                            <p class="book-author">L. Seneca</p>
+                            <button class="btn btn-outline" style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">Place Request</button>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        
+                        <div class="book-info">
+                            <span class="status-badge status-active" style="display: inline-block; margin-bottom: 0.5rem;">Available</span>
+                            <h3 class="book-title">Beyond the Stars</h3>
+                            <p class="book-author">Arthur H.</p>
+                            <button class="btn btn-outline" style="width: 100%; margin-top: 1rem; font-size: 0.85rem;">Place Request</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. My Borrowings -->
+            <section id="borrowings" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Dashboard / My Borrowings</div>
+                    <h2>Borrowing History & Status</h2>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="table-responsive">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Book Title</th>
+                                    <th>Author</th>
+                                    <th>Borrowed Date</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight: 500;">The Silent Echo</td>
+                                    <td style="color: var(--text-secondary);">Eleanor Vance</td>
+                                    <td>Aug 04, 2026</td>
+                                    <td style="color: #e74c3c;">Aug 18, 2026</td>
+                                    <td><span class="status-badge status-pending">Due Soon</span></td>
+                                    <td><button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Renew</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 500;">A Life Well Lived</td>
+                                    <td style="color: var(--text-secondary);">Sarah Jenkins</td>
+                                    <td>Aug 10, 2026</td>
+                                    <td>Aug 24, 2026</td>
+                                    <td><span class="status-badge status-active">Borrowed</span></td>
+                                    <td><button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Renew</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 500;">The Great Gatsby</td>
+                                    <td style="color: var(--text-secondary);">F. Scott Fitzgerald</td>
+                                    <td>Jul 15, 2026</td>
+                                    <td>Jul 29, 2026</td>
+                                    <td><span class="status-badge" style="background-color: var(--bg-secondary); color: var(--text-secondary);">Returned</span></td>
+                                    <td><button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.75rem; border: none;"><i class="fa-solid fa-ellipsis"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Reading Activity & Membership -->
+            <section id="activity" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Dashboard / Activity & Membership</div>
+                    <h2>Your Reading Journey</h2>
+                </div>
+                
+                <div class="two-col-grid" style="margin-bottom: 2rem;">
+                    <!-- Membership Info -->
+                    <div class="dashboard-card" style="background-color: var(--accent); color: white;">
+                        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem;">Bibliophile Plan</h3>
+                        <p style="margin-bottom: 2rem; opacity: 0.9;">Your membership is active and automatically renews on Sept 1, 2026.</p>
+                        
+                        <div style="background: rgba(0,0,0,0.1); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Borrowing Limit</span>
+                                <span>2 Books</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Borrow Period</span>
+                                <span>14 Days</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn" style="background-color: white; color: var(--accent); width: 100%;">Upgrade to Collector</button>
+                    </div>
+                    
+                    <!-- Events -->
+                    <div class="dashboard-card">
+                        <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 1.5rem;">Event Registrations</h3>
+                        
+                        <div style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);">
+                            <div style="background-color: rgba(var(--accent-rgb), 0.1); color: var(--accent); padding: 0.5rem; border-radius: 8px; text-align: center; min-width: 60px;">
+                                <div style="font-size: 1.25rem; font-weight: 700;">15</div>
+                                <div style="font-size: 0.75rem; text-transform: uppercase;">Aug</div>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Author Meet & Greet</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary);">6:00 PM | Main Hall</p>
+                                <span class="status-badge status-active" style="display: inline-block; margin-top: 0.5rem;">Registered</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="background-color: var(--bg-secondary); color: var(--text-secondary); padding: 0.5rem; border-radius: 8px; text-align: center; min-width: 60px;">
+                                <div style="font-size: 1.25rem; font-weight: 700;">22</div>
+                                <div style="font-size: 0.75rem; text-transform: uppercase;">Aug</div>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Sci-Fi Book Club</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary);">7:00 PM | Reading Lounge</p>
+                                <button class="btn btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.75rem; margin-top: 0.5rem;">Register Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Payments & Notifications -->
+            <section id="payments" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Dashboard / Payments</div>
+                    <h2>Payments & Alerts</h2>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h3 style="font-family: 'Playfair Display', serif;">Recent Invoices</h3>
+                        <span style="color: #2ecc71; font-weight: 600;"><i class="fa-solid fa-check-circle"></i> No Outstanding Fines</span>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Download</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Aug 01, 2026</td>
+                                    <td>Membership Renewal (Bibliophile)</td>
+                                    <td>$15.00</td>
+                                    <td><span class="status-badge status-active">Paid</span></td>
+                                    <td><i class="fa-solid fa-download" style="color: var(--accent); cursor: pointer;"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Jul 01, 2026</td>
+                                    <td>Membership Renewal (Bibliophile)</td>
+                                    <td>$15.00</td>
+                                    <td><span class="status-badge status-active">Paid</span></td>
+                                    <td><i class="fa-solid fa-download" style="color: var(--accent); cursor: pointer;"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Profile & Settings -->
+            <section id="profile" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Dashboard / Profile & Settings</div>
+                    <h2>Account Settings</h2>
+                </div>
+                
+                <div class="dashboard-card">
+                    <form action="#">
+                        <div class="two-col-grid" style="margin-bottom: 1.5rem;">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" value="Jane">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" value="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" value="jane.doe@example.com">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label class="form-label">Saved Address</label>
+                            <textarea class="form-control" rows="3">123 Reading Row, Apt 4B&#10;New York, NY 10012</textarea>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="margin-bottom: 1rem;">Notification Preferences</h4>
+                            <label style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <input type="checkbox" checked> Email me when a reserved book is available
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" checked> Send due date reminders 2 days in advance
+                            </label>
+                        </div>
+                        
+                        <button type="button" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <!-- Floating Quick Actions -->
+    <div class="quick-actions-fab">
+        <button class="fab-button" title="Quick Borrow Request">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+    </div>
+
+    <!-- Back to top will be handled by smooth scroll or just standard HTML if needed -->
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

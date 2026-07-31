@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop & Lending Library</title>
+    <meta name="description" content="A premium neighborhood bookshop and lending library. Browse genres, new arrivals, and membership plans.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                Haven
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <!-- Home Dropdown -->
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Home <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" class="dropdown-item">Home 1 (Classic)</a></li>
+                            <li><a href="home2.html" class="dropdown-item">Home 2 (Modern)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="catalog.html" class="nav-link">Catalog</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    
+                    <!-- Dashboard Dropdown -->
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">
+                            Dashboards <i class="fa-solid fa-chevron-down" style="font-size: 0.7em;"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="dashboard.html" class="dropdown-item"><i class="fa-regular fa-user"></i> User Dashboard</a></li>
+                            <li><a href="admin.html" class="dropdown-item"><i class="fa-solid fa-lock"></i> Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-toggles-item">
+                        <div class="header-controls">
+                            <button id="themeToggle" class="toggle-btn" aria-label="Toggle Dark Mode">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+                            <button id="dirToggle" class="btn btn-outline lang-toggle" aria-label="Toggle Text Direction">
+                                LTR
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Services Page Header -->
+    <header class="page-header" style="position: relative; overflow: hidden; background-color: transparent;">
+        <img src="2e507032-a613-4e84-9659-f277c40a5b2f.jpeg" alt="Library Services" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="container reveal" style="position: relative; z-index: 10;">
+            <span class="section-subtitle">What We Offer</span>
+            <h1 class="page-title" style="color: var(--text-primary);">Library Services</h1>
+            <p style="color: var(--text-primary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Beyond books, we offer experiences, community, and discovery.</p>
+        </div>
+    </header>
+
+    <!-- Services Grid Section -->
+    <section class="section">
+        <div class="container">
+            <div class="services-grid-alt">
+                <!-- Service 1 -->
+                <div class="genre-card reveal" style="text-align: left; padding: 3rem;">
+                    <i class="fa-solid fa-book-open-reader genre-icon" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <h3 class="genre-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Lending Library</h3>
+                    <p style="margin-bottom: 2rem;">Access our vast collection of thousands of books with our flexible monthly memberships. Borrow, return, and track your reading journey.</p>
+                    <a href="index.html#memberships" class="btn btn-outline">View Memberships</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="genre-card reveal" style="transition-delay: 0.1s; text-align: left; padding: 3rem;">
+                    <i class="fa-solid fa-gem genre-icon" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <h3 class="genre-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Rare Book Sourcing</h3>
+                    <p style="margin-bottom: 2rem;">Looking for a first edition or an out-of-print classic? Our expert curators will source rare books for your personal collection.</p>
+                    <a href="contact.html" class="btn btn-outline">Inquire Now</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="genre-card reveal" style="transition-delay: 0.2s; text-align: left; padding: 3rem;">
+                    <i class="fa-solid fa-people-group genre-icon" style="font-size: 3rem; margin-bottom: 2rem;"></i>
+                    <h3 class="genre-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Reading Rooms</h3>
+                    <p style="margin-bottom: 2rem;">Rent our quiet, beautifully appointed reading rooms for private study, book clubs, or writing retreats by the hour.</p>
+                    <a href="contact.html" class="btn btn-outline">Book a Room</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background-color: var(--bg-secondary); text-align: center;">
+        <div class="container reveal" style="position: relative; z-index: 10;">
+            <h2 class="section-title">Ready to join our community?</h2>
+            <p style="color: var(--text-primary); margin-bottom: 2rem;">Become a member today and unlock all the benefits Haven has to offer.</p>
+            <a href="index.html#memberships" class="btn btn-primary">Become a Member</a>
+        </div>
+    </section>
+
+    <!-- Section 4: Children's Reading Programs -->
+    <section class="section frosted-glass-section">
+        <div class="container reveal" style="display: flex; justify-content: flex-end;">
+            <div class="frosted-glass-panel">
+                <span class="section-subtitle">Youth Literacy</span>
+                <h2 class="section-title">Children's Programs</h2>
+                <p style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.6;">Foster a lifelong love for literature with our specialized youth programs. We offer weekend storytelling sessions, after-school reading clubs, and summer reading challenges.</p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                    <li style="margin-bottom: 0.5rem; display: flex; align-items: center;"><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 1rem; font-size: 1.2rem;"></i> Toddler Storytime (Ages 2-5)</li>
+                    <li style="margin-bottom: 0.5rem; display: flex; align-items: center;"><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 1rem; font-size: 1.2rem;"></i> Junior Book Club (Ages 6-12)</li>
+                    <li style="margin-bottom: 0.5rem; display: flex; align-items: center;"><i class="fa-solid fa-check" style="color: var(--accent); margin-right: 1rem; font-size: 1.2rem;"></i> Teen Writing Workshops</li>
+                </ul>
+                <a href="#" class="btn btn-primary" style="padding: 1rem 2rem;">Explore Youth Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Corporate & School Partnerships -->
+    <section class="section">
+        <div class="container reveal" style="position: relative; z-index: 10;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">Institutional Partnerships</h2>
+            
+            <div class="hover-panels">
+                <div class="hover-panel-item">
+                    <img src="058c7f8e-97e4-4ef5-a0a0-d3311ead1c59.jpeg" alt="Corporate Memberships" class="hover-panel-img">
+                    <div class="hover-panel-content">
+                        <h3>Corporate Memberships</h3>
+                        <p style="color: var(--text-primary);">Enhance employee wellness with discounted group access to our entire lending catalog and private reading rooms.</p>
+                        <a href="#" style="color: var(--accent); font-weight: 600; text-decoration: none; margin-top: 1rem; display: inline-block;">Inquire Pricing <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="hover-panel-item">
+                    <img src="e3328b87-b2fd-4573-8969-e38826d04f78.jpeg" alt="School Resources" class="hover-panel-img">
+                    <div class="hover-panel-content">
+                        <h3>School Resources</h3>
+                        <p style="color: var(--text-primary);">Supplemental reading materials, educator discounts, and dedicated study hours for partnered local schools.</p>
+                        <a href="#" style="color: var(--accent); font-weight: 600; text-decoration: none; margin-top: 1rem; display: inline-block;">Partner With Us <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: FAQ -->
+    <section class="section">
+        <div class="container reveal" style="max-width: 800px;">
+            <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
+            <div style="margin-top: 3rem;">
+                <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; justify-content: space-between; cursor: pointer;">
+                        How long can I borrow a book? <i class="fa-solid fa-plus" style="color: var(--accent);"></i>
+                    </h3>
+                    <p style="color: var(--text-primary); font-size: 0.95rem;">Standard members can borrow up to 3 books for 14 days. Collector members can borrow up to 5 books for 30 days.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; justify-content: space-between; cursor: pointer;">
+                        Can I reserve a reading room? <i class="fa-solid fa-plus" style="color: var(--accent);"></i>
+                    </h3>
+                    <p style="color: var(--text-primary); font-size: 0.95rem;">Yes, members can reserve our private study and reading rooms up to a week in advance through the member dashboard.</p>
+                </div>
+                <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; justify-content: space-between; cursor: pointer;">
+                        Do you accept book donations? <i class="fa-solid fa-plus" style="color: var(--accent);"></i>
+                    </h3>
+                    <p style="color: var(--text-primary); font-size: 0.95rem;">We gladly accept donations of books in good condition. Rare or antique books can also be appraised by our curation team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <i class="fa-solid fa-book-open"></i> Haven
+                    </a>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Your neighborhood sanctuary for literary exploration and community connection.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#arrivals">New Arrivals</a></li>
+                        <li><a href="#memberships">Memberships</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Member Portal</h4>
+                    <ul class="footer-links">
+                        <li><a href="dashboard.html">User Dashboard</a></li>
+                        <li><a href="#">Borrowing History</a></li>
+                        <li><a href="#">Place Request</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Reading Row, NY 10012</li>
+                        <li><i class="fa-solid fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@chapterandverse.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Haven Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

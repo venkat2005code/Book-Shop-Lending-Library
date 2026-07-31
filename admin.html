@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Haven</title>
+    <meta name="description" content="Library ERP and Administration Dashboard.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+</head>
+<body class="dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="sidebar-header">
+            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-book-open"></i> TBH Admin
+            </a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#overview" class="sidebar-link active"><i class="fa-solid fa-chart-pie"></i> Overview</a></li>
+                <li><a href="#inventory" class="sidebar-link"><i class="fa-solid fa-boxes-stacked"></i> Book Inventory</a></li>
+                <li><a href="#members" class="sidebar-link"><i class="fa-solid fa-users-viewfinder"></i> Member Mgmt</a></li>
+                <li><a href="#events" class="sidebar-link"><i class="fa-solid fa-calendar-day"></i> Events & Plans</a></li>
+                <li><a href="#reports" class="sidebar-link"><i class="fa-solid fa-file-invoice"></i> Reports</a></li>
+                <li><a href="#settings" class="sidebar-link"><i class="fa-solid fa-gears"></i> System Settings</a></li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="index.html" class="btn btn-outline" style="width: 100%; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        
+        <!-- Sticky Header -->
+        <header class="dashboard-header">
+            <div style="display: flex; align-items: center;">
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search system...">
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <!-- Theme Toggles -->
+                <div class="header-controls" style="display: flex; gap: 1rem; align-items: center; margin-right: 1rem;">
+                    <button id="themeToggle" class="toggle-btn" aria-label="Toggle Dark Mode" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); background: none; color: var(--text-primary); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: all 0.3s ease;">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button id="dirToggle" class="btn btn-outline" aria-label="Toggle Text Direction" style="padding: 0.25rem 1rem; font-size: 0.85rem; border-radius: 50px; cursor: pointer; transition: all 0.3s ease;">
+                        LTR
+                    </button>
+                </div>
+
+                <div class="header-icon">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="badge">5</span>
+                </div>
+                
+                <div class="user-profile">
+                    <img src="6eb0ac59-19e0-414c-abec-32cc1edcfd14.jpeg" alt="Clara Evans" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">Clara Evans</span>
+                        <span class="user-role">Head Librarian</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            
+            <!-- 1. Dashboard Overview -->
+            <section id="overview" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Admin / Overview</div>
+                    <h2>Library Operations Overview</h2>
+                </div>
+                
+                <!-- KPIs -->
+                <div class="dashboard-grid">
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-icon" style="color: #3498db; background-color: rgba(52, 152, 219, 0.1);"><i class="fa-solid fa-book-journal-whills"></i></div>
+                        <div class="stat-details">
+                            <h3>Total Books</h3>
+                            <div class="stat-value">12,450</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-icon" style="color: #2ecc71; background-color: rgba(46, 204, 113, 0.1);"><i class="fa-solid fa-users"></i></div>
+                        <div class="stat-details">
+                            <h3>Active Members</h3>
+                            <div class="stat-value">842</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-icon" style="color: #f39c12; background-color: rgba(241, 196, 15, 0.1);"><i class="fa-solid fa-hand-holding-hand"></i></div>
+                        <div class="stat-details">
+                            <h3>Books Issued Today</h3>
+                            <div class="stat-value">45</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card stat-card">
+                        <div class="stat-icon" style="color: #e74c3c; background-color: rgba(231, 76, 60, 0.1);"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="stat-details">
+                            <h3>Overdue Returns</h3>
+                            <div class="stat-value">12</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Book & Inventory Management -->
+            <section id="inventory" class="dashboard-section reveal">
+                <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
+                    <div>
+                        <div class="breadcrumb">Admin / Inventory</div>
+                        <h2>Book Catalog</h2>
+                    </div>
+                    <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fa-solid fa-plus"></i> Add New Book</button>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="table-responsive">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>ISBN</th>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Category</th>
+                                    <th>Stock</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>978-3-16-148410-0</td>
+                                    <td style="font-weight: 500;">The Art of Space</td>
+                                    <td>Mark Z.</td>
+                                    <td>Design</td>
+                                    <td>3 / 5</td>
+                                    <td><span class="status-badge status-active">In Stock</span></td>
+                                    <td><i class="fa-solid fa-pen-to-square" style="cursor: pointer; color: var(--text-secondary);"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>978-1-23-456789-7</td>
+                                    <td style="font-weight: 500;">Midnight in Paris</td>
+                                    <td>Julian Cross</td>
+                                    <td>Mystery</td>
+                                    <td>0 / 2</td>
+                                    <td><span class="status-badge status-overdue">Out of Stock</span></td>
+                                    <td><i class="fa-solid fa-pen-to-square" style="cursor: pointer; color: var(--text-secondary);"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Member & Borrowing Management -->
+            <section id="members" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Admin / Members</div>
+                    <h2>Borrowing Requests</h2>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="table-responsive">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Member Name</th>
+                                    <th>Book Title</th>
+                                    <th>Request Date</th>
+                                    <th>Plan Type</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight: 500;">John Smith</td>
+                                    <td>The Silent Echo</td>
+                                    <td>Today, 10:30 AM</td>
+                                    <td>Collector</td>
+                                    <td>
+                                        <button class="btn btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Approve</button>
+                                        <button class="btn btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Deny</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 500;">Alice Johnson</td>
+                                    <td>Modern Stoicism</td>
+                                    <td>Yesterday</td>
+                                    <td>Bibliophile</td>
+                                    <td>
+                                        <button class="btn btn-primary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Approve</button>
+                                        <button class="btn btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Deny</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Events & Membership Management -->
+            <section id="events" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Admin / Events</div>
+                    <h2>Event & Membership Administration</h2>
+                </div>
+                
+                <div class="two-col-grid" style="margin-bottom: 2rem;">
+                    <!-- Events List -->
+                    <div class="dashboard-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <h3 style="font-family: 'Playfair Display', serif;">Upcoming Events</h3>
+                            <button class="btn btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"><i class="fa-solid fa-plus"></i> New Event</button>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+                            <div>
+                                <h4>Author Meet & Greet</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary);">Aug 15 • 45 Registered</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: var(--text-secondary);"></i>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+                            <div>
+                                <h4>Sci-Fi Book Club</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary);">Aug 22 • 12 Registered</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: var(--text-secondary);"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Membership Plans -->
+                    <div class="dashboard-card">
+                        <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 1.5rem;">Membership Distribution</h3>
+                        <div style="margin-bottom: 1rem;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Bibliophile ($15/mo)</span>
+                                <span>65%</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                <div style="width: 65%; height: 100%; background-color: var(--accent);"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Collector ($25/mo)</span>
+                                <span>35%</span>
+                            </div>
+                            <div style="width: 100%; height: 8px; background-color: var(--bg-secondary); border-radius: 4px; overflow: hidden;">
+                                <div style="width: 35%; height: 100%; background-color: var(--text-primary);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Reports & Analytics -->
+            <section id="reports" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Admin / Reports</div>
+                    <h2>Revenue & Analytics</h2>
+                </div>
+                
+                <div class="dashboard-card" style="min-height: 400px; padding: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <h3 style="margin: 0;">Monthly Revenue</h3>
+                        <span style="background-color: rgba(var(--accent-rgb), 0.1); color: var(--accent); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">+12.5% this year</span>
+                    </div>
+                    
+                    <div class="css-bar-chart" style="display: flex; align-items: flex-end; justify-content: space-between; height: 250px; padding-bottom: 30px; position: relative; border-bottom: 1px solid var(--border-color);">
+                        <!-- Grid Lines -->
+                        <div style="position: absolute; width: 100%; height: 1px; background: var(--border-color); bottom: 25%; z-index: 0; opacity: 0.5;"></div>
+                        <div style="position: absolute; width: 100%; height: 1px; background: var(--border-color); bottom: 50%; z-index: 0; opacity: 0.5;"></div>
+                        <div style="position: absolute; width: 100%; height: 1px; background: var(--border-color); bottom: 75%; z-index: 0; opacity: 0.5;"></div>
+                        <div style="position: absolute; width: 100%; height: 1px; background: var(--border-color); bottom: 100%; z-index: 0; opacity: 0.5;"></div>
+                        
+                        <!-- Bars -->
+                        <div class="chart-col" style="display: flex; flex-direction: column; align-items: center; width: 12%; z-index: 1;">
+                            <div class="chart-bar" style="height: 120px; width: 100%; background: linear-gradient(to top, var(--accent), #9b59b6); border-radius: 6px 6px 0 0; position: relative; cursor: pointer; transition: transform 0.3s ease, filter 0.3s ease;" title="$12,400"></div>
+                            <span style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Jan</span>
+                        </div>
+                        <div class="chart-col" style="display: flex; flex-direction: column; align-items: center; width: 12%; z-index: 1;">
+                            <div class="chart-bar" style="height: 140px; width: 100%; background: linear-gradient(to top, var(--accent), #9b59b6); border-radius: 6px 6px 0 0; position: relative; cursor: pointer; transition: transform 0.3s ease, filter 0.3s ease;" title="$14,100"></div>
+                            <span style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Feb</span>
+                        </div>
+                        <div class="chart-col" style="display: flex; flex-direction: column; align-items: center; width: 12%; z-index: 1;">
+                            <div class="chart-bar" style="height: 110px; width: 100%; background: linear-gradient(to top, var(--accent), #9b59b6); border-radius: 6px 6px 0 0; position: relative; cursor: pointer; transition: transform 0.3s ease, filter 0.3s ease;" title="$11,500"></div>
+                            <span style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Mar</span>
+                        </div>
+                        <div class="chart-col" style="display: flex; flex-direction: column; align-items: center; width: 12%; z-index: 1;">
+                            <div class="chart-bar" style="height: 180px; width: 100%; background: linear-gradient(to top, var(--accent), #9b59b6); border-radius: 6px 6px 0 0; position: relative; cursor: pointer; transition: transform 0.3s ease, filter 0.3s ease;" title="$18,900"></div>
+                            <span style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Apr</span>
+                        </div>
+                        <div class="chart-col" style="display: flex; flex-direction: column; align-items: center; width: 12%; z-index: 1;">
+                            <div class="chart-bar" style="height: 160px; width: 100%; background: linear-gradient(to top, var(--accent), #9b59b6); border-radius: 6px 6px 0 0; position: relative; cursor: pointer; transition: transform 0.3s ease, filter 0.3s ease;" title="$16,200"></div>
+                            <span style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">May</span>
+                        </div>
+                        <div class="chart-col" style="display: flex; flex-direction: column; align-items: center; width: 12%; z-index: 1;">
+                            <div class="chart-bar" style="height: 210px; width: 100%; background: linear-gradient(to top, var(--accent), #9b59b6); border-radius: 6px 6px 0 0; position: relative; cursor: pointer; transition: transform 0.3s ease, filter 0.3s ease;" title="$21,000"></div>
+                            <span style="margin-top: 10px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Jun</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Staff & System Settings -->
+            <section id="settings" class="dashboard-section reveal">
+                <div class="section-header">
+                    <div class="breadcrumb">Admin / Settings</div>
+                    <h2>System Configuration</h2>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+                        <div>
+                            <h4>Automated Late Fine Processing</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Automatically apply fines to overdue accounts daily.</p>
+                        </div>
+                        <input type="checkbox" checked style="width: 20px; height: 20px;">
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
+                        <div>
+                            <h4>System Backup</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Perform weekly database backups.</p>
+                        </div>
+                        <input type="checkbox" checked style="width: 20px; height: 20px;">
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0;">
+                        <div>
+                            <h4>Staff Activity Logging</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Record all CRUD operations performed by librarians.</p>
+                        </div>
+                        <input type="checkbox" checked style="width: 20px; height: 20px;">
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <!-- Floating Help / Action -->
+    <div class="quick-actions-fab">
+        <button class="fab-button" style="background-color: var(--text-primary);" title="System Help">
+            <i class="fa-solid fa-question"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
