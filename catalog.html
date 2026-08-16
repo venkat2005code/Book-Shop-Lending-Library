@@ -65,6 +65,9 @@
                             </button>
                         </div>
                     </li>
+                    <li class="nav-cta-item" style="display: flex; align-items: center; margin-left: 1rem;">
+                        <a href="dashboard.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Join Library</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -73,11 +76,13 @@
     </header>
 
     <!-- Section 1: Hero Search -->
-    <section class="hero" style="background-color: var(--bg-secondary); padding: 10rem 0 6rem; text-align: center;">
-        <div class="container reveal">
-            <span class="hero-subtitle">The Archive</span>
-            <h1 class="hero-title" style="color: white;">Explore the Catalog.</h1>
-            <p class="hero-text" style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">Search thousands of rare editions, contemporary fiction, and historical texts.</p>
+    <section class="hero" style="text-align: center; justify-content: center; align-items: center;">
+        <img src="21fc6ae8-2e0f-4222-931c-b4d65240a994.jpeg" alt="Library Catalog" class="hero-bg">
+        <div class="hero-overlay" style="background: rgba(0,0,0,0.6);"></div>
+        <div class="container relative z-10 reveal">
+            <span class="hero-subtitle" style="color: var(--accent);">The Archive</span>
+            <h1 class="hero-title" style="color: white; margin-bottom: 1rem;">Explore the Catalog.</h1>
+            <p class="hero-text" style="color: #e0e0e0; max-width: 600px; margin: 0 auto 3rem;">Search thousands of rare editions, contemporary fiction, and historical texts.</p>
             <div class="hero-search-wrapper">
                 <input type="text" class="hero-search-input" placeholder="Search by title, author, or ISBN...">
                 <button class="btn btn-primary hero-search-btn"><i class="fa-solid fa-magnifying-glass"></i> <span class="search-btn-text">Search</span></button>
@@ -122,22 +127,33 @@
         </div>
     </section>
 
-    <!-- Section 3: The Rare Books Collection (Horizontal Marquee) -->
+    <!-- Section 3: The Rare Books Collection (Split Layout) -->
     <section class="section" style="background-color: var(--bg-secondary); overflow: hidden;">
         <div class="container reveal">
-            <h2 class="section-title">The Rare Archive</h2>
-        </div>
-        <div class="marquee-container reveal">
-            <div class="marquee-track">
-                <!-- Double the items for seamless scrolling -->
-                <div class="marquee-item"><img src="9c255d6c-0bb5-4160-b6bf-01ca4675fdc3.jpeg" alt="Rare Book 1"></div>
-                <div class="marquee-item"><img src="39e2108d-6337-4cf3-835e-12d9089670c1.jpeg" alt="Rare Book 2"></div>
-                <div class="marquee-item"><img src="c758d2d4-7f56-42c4-b6d6-d03e57ff882d.jpeg" alt="Rare Book 3"></div>
-                <div class="marquee-item"><img src="5225621a-17fc-481c-a286-3b262e4a8e1b.jpeg" alt="Rare Book 4"></div>
-                <div class="marquee-item"><img src="491f8484-d5a8-4518-b727-6d798c82a073.jpeg" alt="Rare Book 5"></div>
-                <div class="marquee-item"><img src="e8796b3f-074f-431e-ab95-c2d5b39cbd82.jpeg" alt="Rare Book 6"></div>
-                <div class="marquee-item"><img src="6a0d727c-26c2-4464-b89e-9c0fb3f2869a.jpeg" alt="Rare Book 7"></div>
-                <div class="marquee-item"><img src="9c255d6c-0bb5-4160-b6bf-01ca4675fdc3.jpeg" alt="Rare Book 1 (Duplicate)"></div>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
+                <!-- Left: Content -->
+                <div style="flex: 1; min-width: 300px; max-width: 500px;">
+                    <h2 class="section-title" style="margin-bottom: 1rem;">The Rare Archive</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">Discover our most prized possessions. This collection features first editions, signed copies, and beautifully bound historical manuscripts carefully preserved for generations of readers.</p>
+                    <a href="#archive" class="btn btn-outline">Explore Archive</a>
+                </div>
+                
+                <!-- Right: Scrolling Marquee -->
+                <div style="flex: 2; min-width: 500px; position: relative;">
+                    <div class="marquee-container" style="width: 100%; left: 0; transform: none; padding: 1rem 0; mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);">
+                        <div class="marquee-track">
+                            <!-- Double the items for seamless scrolling -->
+                            <div class="marquee-item"><img src="9c255d6c-0bb5-4160-b6bf-01ca4675fdc3.jpeg" alt="Rare Book 1"></div>
+                            <div class="marquee-item"><img src="39e2108d-6337-4cf3-835e-12d9089670c1.jpeg" alt="Rare Book 2"></div>
+                            <div class="marquee-item"><img src="c758d2d4-7f56-42c4-b6d6-d03e57ff882d.jpeg" alt="Rare Book 3"></div>
+                            <div class="marquee-item"><img src="5225621a-17fc-481c-a286-3b262e4a8e1b.jpeg" alt="Rare Book 4"></div>
+                            <div class="marquee-item"><img src="491f8484-d5a8-4518-b727-6d798c82a073.jpeg" alt="Rare Book 5"></div>
+                            <div class="marquee-item"><img src="e8796b3f-074f-431e-ab95-c2d5b39cbd82.jpeg" alt="Rare Book 6"></div>
+                            <div class="marquee-item"><img src="6a0d727c-26c2-4464-b89e-9c0fb3f2869a.jpeg" alt="Rare Book 7"></div>
+                            <div class="marquee-item"><img src="9c255d6c-0bb5-4160-b6bf-01ca4675fdc3.jpeg" alt="Rare Book 1 (Duplicate)"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -67,6 +67,9 @@
                             </button>
                         </div>
                     </li>
+                    <li class="nav-cta-item" style="display: flex; align-items: center; margin-left: 1rem;">
+                        <a href="dashboard.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Join Library</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -81,7 +84,7 @@
         <div class="container reveal" style="position: relative; z-index: 10;">
             <span class="section-subtitle">Get in touch</span>
             <h1 class="page-title" style="color: white;">Contact Us</h1>
-            <p style="color: var(--text-primary); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">We'd love to hear from you. Reach out with any inquiries or book requests.</p>
+            <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">We'd love to hear from you. Reach out with any inquiries or book requests.</p>
         </div>
     </header>
 
@@ -154,19 +157,30 @@
     <!-- Section 3: Opening Hours -->
     <section class="section" style="background-color: var(--bg-secondary);">
         <div class="container reveal" style="position: relative; z-index: 10;">
-            <h2 class="section-title" style="text-align: center;">Library Hours</h2>
-            <div style="max-width: 600px; margin: 3rem auto 0; background-color: var(--card-bg); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
-                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
-                    <span style="font-weight: 600;">Monday - Friday</span>
-                    <span style="color: var(--text-primary);">9:00 AM - 8:00 PM</span>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">Library Hours</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+                <!-- Weekdays -->
+                <div style="background-color: var(--card-bg); padding: 3rem 2rem; border-radius: 16px; box-shadow: var(--shadow-md); text-align: center; border-top: 4px solid var(--accent); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fa-regular fa-clock" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem;">Weekdays</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;">Monday - Friday</p>
+                    <span style="display: inline-block; font-size: 1.8rem; font-weight: 700; color: var(--text-primary);">9:00 AM - 8:00 PM</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid var(--border-color);">
-                    <span style="font-weight: 600;">Saturday</span>
-                    <span style="color: var(--text-primary);">10:00 AM - 6:00 PM</span>
+                
+                <!-- Saturday -->
+                <div style="background-color: var(--card-bg); padding: 3rem 2rem; border-radius: 16px; box-shadow: var(--shadow-md); text-align: center; border-top: 4px solid var(--accent); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fa-solid fa-mug-hot" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem;">Weekends</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;">Saturday</p>
+                    <span style="display: inline-block; font-size: 1.8rem; font-weight: 700; color: var(--text-primary);">10:00 AM - 6:00 PM</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; padding: 1rem 0;">
-                    <span style="font-weight: 600;">Sunday & Public Holidays</span>
-                    <span style="color: #e74c3c;">Closed</span>
+                
+                <!-- Sundays -->
+                <div style="background-color: var(--card-bg); padding: 3rem 2rem; border-radius: 16px; box-shadow: var(--shadow-md); text-align: center; border-top: 4px solid #e74c3c; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fa-solid fa-moon" style="font-size: 2.5rem; color: #e74c3c; margin-bottom: 1.5rem;"></i>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1rem;">Rest Days</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;">Sunday & Holidays</p>
+                    <span style="display: inline-block; font-size: 1.8rem; font-weight: 700; color: #e74c3c;">Closed</span>
                 </div>
             </div>
         </div>
@@ -177,33 +191,42 @@
         <div class="container reveal" style="position: relative; z-index: 10;">
             <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">Plan Your Visit</h2>
             <div class="bento-grid">
-                <div class="bento-item bento-wide" style="background-image: url('https://images.unsplash.com/photo-1544257121-6d735071bd1d?q=80&w=600&auto=format&fit=crop'); background-size: cover; background-position: center; color: white;">
-                    <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 12px; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; font-size: 1.8rem;"><i class="fa-solid fa-map-location-dot"></i> Central District</h3>
-                        <p style="opacity: 0.9;">124 Paper Street, Downtown.</p>
+                <!-- 1. Wide Card (Col 1-2) -->
+                <div class="bento-item bento-wide" style="padding: 0; background-image: url('058c7f8e-97e4-4ef5-a0a0-d3311ead1c59.jpeg'); background-size: cover; background-position: center; color: white; overflow: hidden;">
+                    <div style="background: rgba(0,0,0,0.6); padding: 2.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; font-size: 1.8rem;"><i class="fa-solid fa-map-location-dot" style="margin-right: 0.5rem;"></i> Central District</h3>
+                        <p style="opacity: 0.9; font-size: 1.1rem;">124 Paper Street, Downtown.</p>
                     </div>
                 </div>
-                <div class="bento-item bento-tall" style="text-align: center;">
-                    <i class="fa-solid fa-train-subway" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
-                    <h3>Public Transit</h3>
-                    <p style="color: var(--text-primary); font-size: 0.9rem; margin-top: auto;">The closest subway stop is Downtown Center (Red Line), just a 3-minute walk away.</p>
+                
+                <!-- 2. Normal Card (Col 3) -->
+                <div class="bento-item" style="text-align: center; justify-content: center;">
+                    <i class="fa-solid fa-square-parking" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 0.5rem;">Parking</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Validated parking at Elm St.</p>
                 </div>
-                <div class="bento-item" style="text-align: center;">
-                    <i class="fa-solid fa-square-parking" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
-                    <h3>Parking</h3>
-                    <p style="color: var(--text-primary); font-size: 0.9rem;">Validated parking at Elm St.</p>
+
+                <!-- 3. Tall Card (Col 4, spans Row 1-2) -->
+                <div class="bento-item bento-tall" style="text-align: center; justify-content: center; gap: 1rem;">
+                    <i class="fa-solid fa-train-subway" style="font-size: 3.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 0.5rem;">Public Transit</h3>
+                    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">The closest subway stop is Downtown Center (Red Line), just a 3-minute walk away.</p>
                 </div>
-                <div class="bento-item" style="text-align: center; background-color: var(--accent); color: white; border: none;">
-                    <i class="fa-solid fa-wheelchair" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-                    <h3>Accessibility</h3>
-                    <p style="opacity: 0.9; font-size: 0.9rem;">Fully wheelchair accessible.</p>
+                
+                <!-- 4. Normal Card (Col 1, Row 2) -->
+                <div class="bento-item" style="text-align: center; justify-content: center; background-color: var(--accent); color: var(--accent-text); border: none;">
+                    <i class="fa-solid fa-wheelchair" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                    <h3 style="margin-bottom: 0.5rem;">Accessibility</h3>
+                    <p style="opacity: 0.9; font-size: 0.95rem;">Fully wheelchair accessible.</p>
                 </div>
-                <div class="bento-item bento-wide" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 2rem;">
+                
+                <!-- 5. Wide Card (Col 2-3, Row 2) -->
+                <div class="bento-item bento-wide" style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 2.5rem;">
                     <div>
-                        <h3 style="margin-bottom: 0.5rem;">Need Directions?</h3>
-                        <p style="color: var(--text-primary); font-size: 0.9rem;">Get a custom route based on your location.</p>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Need Directions?</h3>
+                        <p style="color: var(--text-secondary); font-size: 1rem;">Get a custom route based on your location.</p>
                     </div>
-                    <button class="btn btn-primary" style="border-radius: 50%; width: 60px; height: 60px; padding: 0; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn btn-primary" style="border-radius: 50%; width: 60px; height: 60px; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>

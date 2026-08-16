@@ -65,6 +65,9 @@
                             </button>
                         </div>
                     </li>
+                    <li class="nav-cta-item" style="display: flex; align-items: center; margin-left: 1rem;">
+                        <a href="dashboard.html" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Join Library</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -80,7 +83,7 @@
             <div class="hero-content reveal">
                 <span class="hero-subtitle" style="color: var(--accent);">Community & Gatherings</span>
                 <h1 class="hero-title" style="color: white; font-size: 4rem;">Come Together.</h1>
-                <p class="hero-text" style="color: var(--text-primary); max-width: 600px; margin: 0 auto 3rem;">From intimate author readings to lively book clubs and youth workshops, Haven is where the community connects.</p>
+                <p class="hero-text" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 3rem;">From intimate author readings to lively book clubs and youth workshops, Haven is where the community connects.</p>
                 <a href="#schedule" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem;">View Schedule</a>
             </div>
         </div>
@@ -90,29 +93,63 @@
     <section id="schedule" class="section">
         <div class="container reveal">
             <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">This Week at Haven</h2>
-            <div class="calendar-grid">
-                <div class="calendar-cell large">
-                    <span class="calendar-date">12</span>
-                    <div class="calendar-content">
-                        <span style="color: var(--accent); font-weight: 600;">Thursday, 6:00 PM</span>
-                        <h3 style="font-size: 2rem; margin: 0.5rem 0;">Fiction Book Club</h3>
-                        <p style="color: var(--text-secondary);">Join us for a discussion of this month's pick: "The Silent Echo".</p>
+            <div class="event-timeline" style="max-width: 800px; margin: 0 auto; position: relative;">
+                <!-- Vertical line -->
+                <div style="position: absolute; left: 50px; top: 0; bottom: 0; width: 2px; background: var(--border-color); z-index: 0;"></div>
+
+                <!-- Event 1 -->
+                <div style="display: flex; gap: 3rem; margin-bottom: 4rem; position: relative; z-index: 1;">
+                    <!-- Date bubble -->
+                    <div style="flex: 0 0 100px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--bg-primary); border: 2px solid var(--accent); border-radius: 50%; width: 100px; height: 100px; color: var(--accent); position: relative;">
+                        <span style="font-size: 2rem; font-weight: bold; line-height: 1; font-family: var(--font-heading);">12</span>
+                        <span style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Thu</span>
+                    </div>
+                    
+                    <!-- Content Card -->
+                    <div style="flex: 1; background: var(--bg-secondary); padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border-color);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                            <span style="display: inline-block; padding: 0.4rem 1.2rem; background: rgba(220,107,74,0.1); color: var(--accent); border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">6:00 PM</span>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;"><i class="fa-regular fa-bookmark" style="margin-right: 5px;"></i> Book Club</span>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1rem;">Fiction Book Club</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">Join us for a discussion of this month's pick: "The Silent Echo". Dive into the themes, meet fellow book lovers, and enjoy complimentary refreshments.</p>
+                        <a href="#rsvp" class="btn btn-outline" style="padding: 0.8rem 1.5rem;">RSVP Now</a>
                     </div>
                 </div>
-                <div class="calendar-cell">
-                    <span class="calendar-date">13</span>
-                    <div class="calendar-content">
-                        <span style="color: var(--accent); font-weight: 600;">Friday, 7:30 PM</span>
-                        <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Poetry Open Mic</h3>
-                        <p style="color: var(--text-secondary);">Share your original work.</p>
+                
+                <!-- Event 2 -->
+                <div style="display: flex; gap: 3rem; margin-bottom: 4rem; position: relative; z-index: 1;">
+                    <div style="flex: 0 0 100px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--bg-primary); border: 2px solid var(--accent); border-radius: 50%; width: 100px; height: 100px; color: var(--accent); position: relative;">
+                        <span style="font-size: 2rem; font-weight: bold; line-height: 1; font-family: var(--font-heading);">13</span>
+                        <span style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Fri</span>
+                    </div>
+                    
+                    <div style="flex: 1; background: var(--bg-secondary); padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border-color);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                            <span style="display: inline-block; padding: 0.4rem 1.2rem; background: rgba(220,107,74,0.1); color: var(--accent); border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">7:30 PM</span>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;"><i class="fa-solid fa-microphone-lines" style="margin-right: 5px;"></i> Open Mic</span>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1rem;">Poetry Open Mic</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">Share your original work or simply listen to the voices of our local community. All genres and experience levels are welcome to participate.</p>
+                        <a href="#rsvp" class="btn btn-outline" style="padding: 0.8rem 1.5rem;">Reserve a Spot</a>
                     </div>
                 </div>
-                <div class="calendar-cell">
-                    <span class="calendar-date">14</span>
-                    <div class="calendar-content">
-                        <span style="color: var(--accent); font-weight: 600;">Saturday, 10:00 AM</span>
-                        <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Author Signing</h3>
-                        <p style="color: var(--text-secondary);">Meet NYT Bestseller Julian Cross.</p>
+
+                <!-- Event 3 -->
+                <div style="display: flex; gap: 3rem; position: relative; z-index: 1;">
+                    <div style="flex: 0 0 100px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--bg-primary); border: 2px solid var(--accent); border-radius: 50%; width: 100px; height: 100px; color: var(--accent); position: relative;">
+                        <span style="font-size: 2rem; font-weight: bold; line-height: 1; font-family: var(--font-heading);">14</span>
+                        <span style="font-size: 0.8rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Sat</span>
+                    </div>
+                    
+                    <div style="flex: 1; background: var(--bg-secondary); padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--border-color);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                            <span style="display: inline-block; padding: 0.4rem 1.2rem; background: rgba(220,107,74,0.1); color: var(--accent); border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">10:00 AM</span>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;"><i class="fa-solid fa-pen-nib" style="margin-right: 5px;"></i> Meet & Greet</span>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1rem;">Author Signing: Julian Cross</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">Meet NYT Bestselling author Julian Cross as he signs copies of his latest thriller. Books will be available for purchase at the door.</p>
+                        <a href="#rsvp" class="btn btn-outline" style="padding: 0.8rem 1.5rem;">View Details</a>
                     </div>
                 </div>
             </div>
